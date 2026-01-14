@@ -83,26 +83,72 @@ All User Stories require:
 }
 ```
 
-### Marketplace Hooks
+### Marketplace Schema (`.claude-plugin/marketplace.json`)
 
-The marketplace supports hooks for lifecycle events:
+The marketplace manifest requires these fields:
 
 ```json
 {
-  "hooks": {
-    "conversationStart": {
-      "dynamic": true,
-      "context": {
-        "git_repo": "git remote get-url origin 2>/dev/null",
-        "git_branch": "git branch --show-current 2>/dev/null"
-      },
-      "message": "Welcome! Working on `{{git_repo}}` branch `{{git_branch}}`"
+  "name": "marketplace-name",
+  "owner": {
+    "name": "Owner Name",
+    "email": "owner@example.com"
+  },
+  "plugins": [
+    {
+      "name": "plugin-name",
+      "description": "Plugin description",
+      "version": "1.0.0",
+      "source": {
+        "source": "github",
+        "repo": "owner/repo-name",
+        "path": "path/to/plugin"
+      }
     }
+  ]
+}
+```
+
+**Required Fields:**
+- `name` - Top-level marketplace name (string, required)
+- `owner` - Object with `name` (required) and optional `email`
+- `plugins` - Array of plugin objects
+
+**Plugin Object Fields:**
+- `name` - Plugin identifier (kebab-case)
+- `description` - Human-readable description
+- `version` - Semver version
+- `source` - Source object (see below)
+
+**Source Formats:**
+
+Relative path (no `../` traversal allowed):
+```json
+{ "source": "./plugins/my-plugin" }
+```
+
+GitHub repository:
+```json
+{
+  "source": {
+    "source": "github",
+    "repo": "owner/repo-name",
+    "path": "path/within/repo"
   }
 }
 ```
 
-**Hook Properties:**
+Git URL:
+```json
+{
+  "source": {
+    "source": "url",
+    "url": "https://gitlab.com/team/plugin.git"
+  }
+}
+```
+
+**Hook Properties (optional):**
 - `dynamic` - If true, runs context commands and interpolates `{{variables}}`
 - `context` - Map of variable names to bash commands
 - `message` - Template with `{{variable}}` placeholders
