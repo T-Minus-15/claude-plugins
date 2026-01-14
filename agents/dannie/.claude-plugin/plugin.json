@@ -1,0 +1,9 @@
+{
+  "name": "dannie",
+  "version": "1.0.0",
+  "description": "Dannie the Designer - T-Minus-15 UX design and architecture agent",
+  "keywords": ["t-minus-15", "agent", "design", "ux", "architecture"],
+  "dependencies": {
+    "user-story": "^1.0.0"
+  }
+}

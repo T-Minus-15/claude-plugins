@@ -1,0 +1,6 @@
+{
+  "name": "user-story",
+  "version": "1.0.0",
+  "description": "Create, edit, and view User Stories with AMP acceptance criteria",
+  "keywords": ["t-minus-15", "user-story", "amp", "acceptance-criteria", "gherkin"]
+}

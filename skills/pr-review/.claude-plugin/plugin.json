@@ -1,0 +1,6 @@
+{
+  "name": "pr-review",
+  "version": "1.0.0",
+  "description": "Expert pull request reviewer with security, quality, and documentation checks",
+  "keywords": ["t-minus-15", "code-review", "pull-request", "security"]
+}

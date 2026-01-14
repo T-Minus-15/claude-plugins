@@ -1,0 +1,10 @@
+{
+  "name": "pennie",
+  "version": "1.0.0",
+  "description": "Pennie the Prepper - T-Minus-15 Feature and User Story preparation agent",
+  "keywords": ["t-minus-15", "agent", "prep", "feature", "user-story"],
+  "dependencies": {
+    "feature": "^1.0.0",
+    "user-story": "^1.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "t-minus-15",
+  "description": "T-Minus-15 Agent Suite - Persona-based AI agents for the complete software development lifecycle",
+  "version": "1.0.0",
+  "author": {
+    "name": "T-Minus-15",
+    "url": "https://github.com/T-Minus-15"
+  },
+  "homepage": "https://github.com/T-Minus-15/t-15-claude-plugins",
+  "repository": "https://github.com/T-Minus-15/t-15-claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "t-minus-15",
+    "devops",
+    "agile",
+    "agents",
+    "planning",
+    "testing"
+  ]
+}

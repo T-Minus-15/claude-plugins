@@ -1,0 +1,6 @@
+{
+  "name": "e2e-tests",
+  "version": "1.0.0",
+  "description": "Create, edit, run, and manage E2E tests using Playwright",
+  "keywords": ["t-minus-15", "testing", "playwright", "e2e", "automation"]
+}
