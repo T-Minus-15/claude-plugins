@@ -120,101 +120,99 @@ AskUserQuestion({
 });
 ```
 
-## Contributing to Marketplace Repos
+## Contributing to T-Minus-15 Plugin Marketplace
 
-When improvements apply to shared/marketplace repositories (e.g., T-Minus-15, skill templates), offer to contribute back:
+When you identify improvements that could benefit the T-Minus-15 agents or skills, offer to submit an issue to the plugin marketplace repository.
 
-### Identifying Marketplace Improvements
+### What to Look For
 
-Look for improvements that would benefit others:
-- T-Minus-15 process template updates (https://github.com/BenGWeeks/T-Minus-15)
-- Skill templates that could be shared
-- Documentation patterns others could use
+- Agent improvements (Poppie, Pennie, Dannie, Ernie, Archie, Teddie, Ollie)
+- Skill enhancements (epic, feature, user-story, e2e-tests, pr-review, reflect, tech-stack)
+- New skills that would benefit T-Minus-15 users
+- Bug fixes or corrections
+- Documentation improvements
 
-### Proposing Contributions
+### Proposing Plugin Improvements
 
-Use AskUserQuestion to offer contribution options:
+Use `AskUserQuestion` to ask if the user wants to submit an issue:
 
 ```typescript
 AskUserQuestion({
   questions: [{
-    question: "This improvement to AMP format could benefit the T-Minus-15 template. How would you like to contribute?",
+    question: "This improvement could benefit the T-Minus-15 plugins. Would you like to submit an issue to the marketplace repo?",
     header: "Contribute",
     options: [
-      { label: "Create Issue", description: "Open a GitHub issue describing the improvement" },
-      { label: "Create PR", description: "Create a simple PR with the change" },
-      { label: "Local only", description: "Keep this change local, don't contribute" }
+      { label: "[ENHANCEMENT]", description: "Improve existing agent/skill functionality" },
+      { label: "[BUG]", description: "Report a bug or incorrect behaviour" },
+      { label: "[FEATURE]", description: "Request a new feature or capability" },
+      { label: "Skip", description: "Don't submit an issue" }
     ],
     multiSelect: false
   }]
 });
 ```
 
-### Creating Issues
+### Issue Prefixes
 
-When creating an issue:
-1. Use `gh issue create` command
-2. Provide clear title describing the improvement
-3. Include context on why this helps
-4. Reference any relevant examples
+Always prefix issue titles with the appropriate tag:
 
-```bash
-gh issue create --repo BenGWeeks/T-Minus-15 \
-  --title "Add Gherkin format requirement to AMP acceptance criteria" \
-  --body "$(cat <<'EOF'
-## Suggestion
-Add explicit guidance that acceptance criteria should use Gherkin format (GIVEN/WHEN/THEN).
+| Prefix | Use When |
+|--------|----------|
+| `[ENHANCEMENT]` | Improving existing functionality (most common) |
+| `[BUG]` | Reporting incorrect behaviour or errors |
+| `[FEATURE]` | Requesting new agents, skills, or capabilities |
 
-## Rationale
-- Makes criteria verifiable by development agents
-- Provides consistent structure across all User Stories
-- Enables automated test generation
-
-## Example
-```gherkin
-SCENARIO: User logs in successfully
-GIVEN I am on the login page
-WHEN I enter valid credentials
-THEN I am redirected to the dashboard
-```
-EOF
-)"
-```
-
-### Creating PRs
-
-When creating a PR, keep it **simple and focused**:
-
-1. **One change per PR** - Don't bundle multiple improvements
-2. **Small diff** - Easy to review means faster merge
-3. **Clear description** - Explain what and why
-4. **No scope creep** - Resist adding "while I'm here" changes
+### Creating Plugin Issues
 
 ```bash
-# Fork, clone, branch, make change, then:
-gh pr create --repo BenGWeeks/T-Minus-15 \
-  --title "Add Gherkin format guidance to user-story-metadata" \
+gh issue create --repo T-Minus-15/t-15-claude-plugins \
+  --title "[ENHANCEMENT] Add validation guidance to user-story skill" \
   --body "$(cat <<'EOF'
 ## Summary
-Adds explicit guidance that acceptance criteria should use Gherkin syntax.
+Add guidance for validating User Story acceptance criteria format.
 
-## Changes
-- Added Gherkin keyword reference to user-story-metadata.adoc
-- Added example scenario format
+## Current Behaviour
+The user-story skill doesn't validate AMP format.
 
-## Why
-Makes acceptance criteria verifiable and enables test automation.
+## Suggested Improvement
+Add validation checklist to ensure:
+- Each story has Acceptance criteria
+- Measures are quantifiable
+- Proof methods are defined
+
+## Benefit
+Helps ensure consistent, testable User Stories across projects.
 EOF
 )"
+```
+
+### Example Improvements to Suggest
+
+| Agent/Skill | Example Enhancement |
+|-------------|---------------------|
+| Archie | Add new security checklist items |
+| Teddie | Include visual regression testing guidance |
+| tech-stack | Add alternative stacks for mobile/serverless |
+| user-story | Improve AMP criteria examples |
+| reflect | Add more reflection prompts |
+
+## Contributing to T-Minus-15 Book
+
+For improvements to the T-Minus-15 methodology itself (not the plugins), submit to the book repo:
+
+```bash
+gh issue create --repo T-Minus-15/t-15-book \
+  --title "[ENHANCEMENT] Clarify sprint planning guidance" \
+  --body "..."
 ```
 
 ### Contribution Checklist
 
 Before contributing:
 - [ ] Is this improvement general enough to benefit others?
-- [ ] Is the change small and focused?
-- [ ] Does it follow the repo's contribution guidelines?
-- [ ] Is the description clear and concise?
+- [ ] Have you chosen the correct prefix ([ENHANCEMENT], [BUG], [FEATURE])?
+- [ ] Is the description clear and actionable?
+- [ ] Have you specified which agent/skill is affected?
 
 ## Tips
 
