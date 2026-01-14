@@ -1,21 +1,99 @@
 {
-  "name": "t-minus-15",
-  "description": "T-Minus-15 Agent Suite - Persona-based AI agents for the complete software development lifecycle",
-  "version": "1.0.0",
-  "author": {
+  "owner": {
     "name": "T-Minus-15",
     "url": "https://github.com/T-Minus-15"
   },
-  "homepage": "https://github.com/T-Minus-15/t-15-claude-plugins",
-  "repository": "https://github.com/T-Minus-15/t-15-claude-plugins",
-  "license": "MIT",
-  "keywords": [
-    "t-minus-15",
-    "devops",
-    "agile",
-    "agents",
-    "planning",
-    "testing"
+  "plugins": [
+    {
+      "name": "t-minus-15",
+      "description": "Complete T-Minus-15 Agent Suite - all agents and skills",
+      "version": "1.0.0",
+      "path": "../t-minus-15"
+    },
+    {
+      "name": "poppie",
+      "description": "Poppie the Planner - Strategic planning and Epics",
+      "version": "1.0.0",
+      "path": "../agents/poppie"
+    },
+    {
+      "name": "pennie",
+      "description": "Pennie the Prepper - Requirements and backlog review",
+      "version": "1.0.0",
+      "path": "../agents/pennie"
+    },
+    {
+      "name": "dannie",
+      "description": "Dannie the Designer - Brand guidelines and UX/UI design",
+      "version": "1.0.0",
+      "path": "../agents/dannie"
+    },
+    {
+      "name": "ernie",
+      "description": "Ernie the Engineer - Code development and implementation",
+      "version": "1.0.0",
+      "path": "../agents/ernie"
+    },
+    {
+      "name": "archie",
+      "description": "Archie the Architect - Architecture docs and code review",
+      "version": "1.0.0",
+      "path": "../agents/archie"
+    },
+    {
+      "name": "teddie",
+      "description": "Teddie the Tester - E2E tests and QA",
+      "version": "1.0.0",
+      "path": "../agents/teddie"
+    },
+    {
+      "name": "ollie",
+      "description": "Ollie the Operator - Deployments and operations",
+      "version": "1.0.0",
+      "path": "../agents/ollie"
+    },
+    {
+      "name": "epic",
+      "description": "Epic planning skill with T-Minus-15 metadata",
+      "version": "1.0.0",
+      "path": "../skills/epic"
+    },
+    {
+      "name": "feature",
+      "description": "Feature management with MoSCoW prioritization",
+      "version": "1.0.0",
+      "path": "../skills/feature"
+    },
+    {
+      "name": "user-story",
+      "description": "User Stories with AMP acceptance criteria",
+      "version": "1.0.0",
+      "path": "../skills/user-story"
+    },
+    {
+      "name": "e2e-tests",
+      "description": "Playwright E2E test management",
+      "version": "1.0.0",
+      "path": "../skills/e2e-tests"
+    },
+    {
+      "name": "pr-review",
+      "description": "Pull request review workflows",
+      "version": "1.0.0",
+      "path": "../skills/pr-review"
+    },
+    {
+      "name": "reflect",
+      "description": "Continuous improvement and contribution",
+      "version": "1.0.0",
+      "path": "../skills/reflect"
+    },
+    {
+      "name": "tech-stack",
+      "description": "Default web app technology stack",
+      "version": "1.0.0",
+      "path": "../skills/tech-stack"
+    }
   ],
   "hooks": {
     "conversationStart": {
@@ -25,7 +103,7 @@
         "git_branch": "git branch --show-current 2>/dev/null || echo 'Not a git repo'",
         "git_status": "git status --porcelain 2>/dev/null | wc -l | xargs"
       },
-      "message": "## Hi, I'm Poppie! 👋 Welcome to the T-Minus-15 Team\n\n**Current Context:**\n- 📁 Repo: `{{git_repo}}`\n- 🌿 Branch: `{{git_branch}}`\n- 📝 Uncommitted changes: {{git_status}} file(s)\n\n---\n\nI'm the Planner, and here's our crew ready to help:\n\n| Command | Agent | What They Do |\n|---------|-------|-------------|\n| `/plan` | **Poppie** (me!) | Strategic planning, Epics, roadmaps |\n| `/prep` | **Pennie** | Requirements, backlog review, User Stories |\n| `/design` | **Dannie** | Brand guidelines, UX/UI, wireframes |\n| `/engineer` | **Ernie** | Code development, implementation |\n| `/vet` | **Archie** | Architecture docs, code review, pre-push checks |\n| `/test` | **Teddie** | E2E tests, QA, test automation |\n| `/operate` | **Ollie** | Deployments, workflow monitoring, incident investigation |\n\n**Quick Start Examples:**\n```\n/prep --review                 # Review backlog completeness\n/design --brand                # Create or extract brand guidelines\n/vet --pre-push                # Code review before pushing\n/operate --watch-pr #123       # Monitor PR workflows\n```\n\n**Skills:** `/epic`, `/feature`, `/user-story`, `/e2e-tests`, `/pr-review`, `/reflect`\n\n**Platforms:** GitHub & Azure DevOps supported\n\n---\n\nWhat would you like to work on today?"
+      "message": "## Hi, I'm Poppie! Welcome to the T-Minus-15 Team\n\n**Current Context:**\n- Repo: `{{git_repo}}`\n- Branch: `{{git_branch}}`\n- Uncommitted changes: {{git_status}} file(s)\n\n---\n\nI'm the Planner, and here's our crew ready to help:\n\n| Command | Agent | What They Do |\n|---------|-------|-------------|\n| `/plan` | **Poppie** (me!) | Strategic planning, Epics, roadmaps |\n| `/prep` | **Pennie** | Requirements, backlog review, User Stories |\n| `/design` | **Dannie** | Brand guidelines, UX/UI, wireframes |\n| `/engineer` | **Ernie** | Code development, implementation |\n| `/vet` | **Archie** | Architecture docs, code review, pre-push checks |\n| `/test` | **Teddie** | E2E tests, QA, test automation |\n| `/operate` | **Ollie** | Deployments, workflow monitoring, incident investigation |\n\n**Quick Start Examples:**\n```\n/prep --review                 # Review backlog completeness\n/design --brand                # Create or extract brand guidelines\n/vet --pre-push                # Code review before pushing\n/operate --watch-pr #123       # Monitor PR workflows\n```\n\n**Skills:** `/epic`, `/feature`, `/user-story`, `/e2e-tests`, `/pr-review`, `/reflect`\n\n**Platforms:** GitHub & Azure DevOps supported\n\n---\n\nWhat would you like to work on today?"
     }
   }
 }
