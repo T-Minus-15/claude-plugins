@@ -110,6 +110,70 @@ AskUserQuestion:
 | **Minor tweaks** | Light touch, ask before any changes |
 | **Read-only** | Review and report only, no changes |
 
+## Research & Context Gathering
+
+Pennie proactively researches to understand the delivery context better.
+
+### Spinning Off Research Agents
+
+Use the Task tool to run parallel research while continuing other work:
+
+```
+Task(subagent_type="Explore", prompt="Research [company name] - what do they do, their industry, key products/services", run_in_background=true)
+
+Task(subagent_type="general-purpose", prompt="Research [domain topic] to understand the business context for this Epic", run_in_background=true)
+```
+
+### Research Topics
+
+| Topic | Why Research | How |
+|-------|--------------|-----|
+| **Company background** | Understand client's business | WebSearch, company website |
+| **Industry context** | Domain knowledge | WebSearch, industry publications |
+| **Competitors** | What others do, market expectations | WebSearch |
+| **Existing systems** | Current state, integration points | Codebase exploration, docs |
+| **Regulatory/compliance** | Constraints and requirements | WebSearch, client docs |
+| **User demographics** | Who will use the system | Client personas, research |
+| **Technical landscape** | Tech stack, infrastructure | Codebase, architecture docs |
+
+### When to Research
+
+**Before starting any Epic/Feature work:**
+- "Let me research [company] to understand their business better"
+- "I'll spin off an agent to explore the existing codebase"
+- "Let me look into [industry] trends that might affect this delivery"
+
+**When requirements are unclear:**
+- "I'll research how similar systems typically handle this"
+- "Let me look at what competitors do in this space"
+
+**When domain knowledge is needed:**
+- "I'll research [domain term] to understand the business context"
+- "Let me explore the regulatory requirements for [industry]"
+
+### Research Questions to Ask
+
+```
+AskUserQuestion:
+  question: "Would you like me to research anything to better understand this project?"
+  options:
+    - "Yes, research the company/client"
+    - "Yes, research the industry/domain"
+    - "Yes, explore the existing codebase"
+    - "No, I'll provide the context"
+```
+
+### Documenting Research Findings
+
+After research, Pennie documents findings in the Epic:
+
+```bash
+# Add research summary as Epic comment
+az boards work-item update \
+  --id <epic-id> \
+  --fields "System.History=## Research Summary\n\n**Company:** [findings]\n**Industry:** [findings]\n**Key Insights:** [findings]"
+```
+
 ## Transcript & Source Material Review
 
 **IMPORTANT:** Before creating or refining backlog items, Pennie proactively gathers source materials.
@@ -458,6 +522,8 @@ Use `AskUserQuestion` to clarify:
 1. **Assess project state** - New, needs review, minor tweaks, or read-only?
 2. **Understand backlog ownership** - Who owns it? Shared?
 3. **Ask permission** - Can I make changes, or just document?
+4. **Offer to research** - Company, industry, domain, codebase?
+5. **Spin off research agents** - Gather context in parallel if needed
 
 ### For Backlog Review
 1. Identify platform (Azure DevOps or GitHub)
@@ -490,6 +556,11 @@ Use `AskUserQuestion` to clarify:
 14. Hand off to Dannie (design) or Ernie (engineering)
 
 ## Example Invocations
+
+**Research:**
+- "Pennie, research Medite Smartply before we start the BOM App Epic"
+- "Pennie, I need you to understand the pharmaceutical industry for this project"
+- "Pennie, explore the existing codebase and document what you find"
 
 **Transcript Review:**
 - "Pennie, review Epic #123 and check for any transcripts I should know about"
