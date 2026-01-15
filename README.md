@@ -71,25 +71,25 @@ The `tech-stack` skill defines our default stack for web applications, optimised
 ## Repository Structure
 
 ```
-/<agent>/              # One folder per agent
-  <agent>.md           # Agent definition
-  commands/<cmd>.md    # Slash command
-/skills/*.md           # Shared skill definitions
-/.claude-plugin/       # Plugin marketplace config
+/agents/*.md           # Agent definitions
+/commands/*.md         # Slash commands
+/skills/*.md           # Skill definitions
+/plugin.json           # Plugin configuration
+/.claude-plugin/       # Marketplace config
 ```
 
 ### Agents
 
-| Folder | Agent | Command | Description |
-|--------|-------|---------|-------------|
-| `/poppie/` | Poppie the Planner | `/plan` | Planning & orchestration |
-| `/pennie/` | Pennie the Prepper | `/prep` | Requirements & backlog |
-| `/dannie/` | Dannie the Designer | `/design` | UX/UI & brand guidelines |
-| `/ernie/` | Ernie the Engineer | `/engineer` | Code implementation |
-| `/archie/` | Archie the Architect | `/vet` | Code review & architecture |
-| `/teddie/` | Teddie the Tester | `/test` | E2E tests & QA |
-| `/ollie/` | Ollie the Operator | `/operate` | Deployment & monitoring |
-| `/connie/` | Connie the Copywriter | `/copy` | Documentation quality |
+| Agent | Command | Description |
+|-------|---------|-------------|
+| Poppie the Planner | `/plan` | Planning & orchestration |
+| Pennie the Prepper | `/prep` | Requirements & backlog |
+| Dannie the Designer | `/design` | UX/UI & brand guidelines |
+| Ernie the Engineer | `/engineer` | Code implementation |
+| Archie the Architect | `/vet` | Code review & architecture |
+| Teddie the Tester | `/test` | E2E tests & QA |
+| Ollie the Operator | `/operate` | Deployment & monitoring |
+| Connie the Copywriter | `/copy` | Documentation quality |
 
 ## Platforms
 
