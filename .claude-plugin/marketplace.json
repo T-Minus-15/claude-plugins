@@ -8,7 +8,7 @@
     {
       "name": "t-minus-15-team",
       "description": "AI agents implementing 'T-Minus-15: Secrets of an Elite DevOps Team'. Prep → Design → Engineer → Test → Operate methodology with quality gates, structured work items (Epics, Features, User Stories with AMP criteria), and cross-functional collaboration.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": {
         "source": "github",
         "repo": "T-Minus-15/claude-plugins",

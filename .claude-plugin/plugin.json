@@ -1,6 +1,6 @@
 {
   "name": "t-minus-15-team",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AI agents implementing 'T-Minus-15: Secrets of an Elite DevOps Team'",
   "agents": "../t-minus-15-team/agents/",
   "commands": "../t-minus-15-team/commands/",
