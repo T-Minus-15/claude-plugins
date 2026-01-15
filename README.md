@@ -71,11 +71,25 @@ The `tech-stack` skill defines our default stack for web applications, optimised
 ## Repository Structure
 
 ```
-/*.md                  # Agent definitions (poppie.md, pennie.md, etc.)
-/skills/*.md           # Skill definitions
-/commands/*.md         # Slash command definitions
+/<agent>/              # One folder per agent
+  <agent>.md           # Agent definition
+  commands/<cmd>.md    # Slash command
+/skills/*.md           # Shared skill definitions
 /.claude-plugin/       # Plugin marketplace config
 ```
+
+### Agents
+
+| Folder | Agent | Command | Description |
+|--------|-------|---------|-------------|
+| `/poppie/` | Poppie the Planner | `/plan` | Planning & orchestration |
+| `/pennie/` | Pennie the Prepper | `/prep` | Requirements & backlog |
+| `/dannie/` | Dannie the Designer | `/design` | UX/UI & brand guidelines |
+| `/ernie/` | Ernie the Engineer | `/engineer` | Code implementation |
+| `/archie/` | Archie the Architect | `/vet` | Code review & architecture |
+| `/teddie/` | Teddie the Tester | `/test` | E2E tests & QA |
+| `/ollie/` | Ollie the Operator | `/operate` | Deployment & monitoring |
+| `/connie/` | Connie the Copywriter | `/copy` | Documentation quality |
 
 ## Platforms
 
