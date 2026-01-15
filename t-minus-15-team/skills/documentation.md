@@ -20,7 +20,8 @@ This skill defines the standard documentation structure for T-Minus-15 projects.
 | `CONFIDENTIALITY.adoc` | Data classification, security requirements, access controls | Archie |
 | `CONTACTS.adoc` | Key stakeholders, support contacts, escalation paths | Poppie |
 | `FAQS.adoc` | Frequently asked questions and answers | Poppie, Pennie |
-| `TERMS.adoc` | Glossary of terms, acronyms, and definitions | Pennie |
+| `TERMS.adoc` | Glossary of domain-specific terms and definitions | Pennie |
+| `ACRONYMS.adoc` | Project and industry acronyms | Pennie |
 | `TROUBLESHOOTING.adoc` | Common problems and solutions (table format) | Ollie, Teddie |
 | `TECHNICAL_SOLUTION.adoc` | Master document that compiles all above docs | Archie, Connie |
 
@@ -388,17 +389,19 @@ Answer to question 2.
 Step-by-step answer.
 ```
 
-### TERMS.adoc
+### ACRONYMS.adoc
 
 ```asciidoc
-= Glossary of Terms
+= Acronyms
 :toc:
 
-== Acronyms
+Project and industry acronyms used in this documentation.
+
+== General Technical
 
 [cols="1,3"]
 |===
-| Term | Definition
+| Acronym | Definition
 
 | API
 | Application Programming Interface
@@ -406,9 +409,66 @@ Step-by-step answer.
 | CI/CD
 | Continuous Integration / Continuous Deployment
 
+| CRUD
+| Create, Read, Update, Delete
+
+| UI/UX
+| User Interface / User Experience
+
 |===
 
+== Project Specific
+
+[cols="1,3"]
+|===
+| Acronym | Definition
+
+| BOM
+| Bill of Materials
+
+| [Add project-specific acronyms as they are encountered]
+|
+
+|===
+
+== Industry / Domain
+
+[cols="1,3"]
+|===
+| Acronym | Definition
+
+| [Add industry acronyms as they are encountered]
+|
+
+|===
+```
+
+**Pennie's Responsibility:** Pennie should add acronyms to this file whenever she encounters them during:
+- Transcript reviews
+- Stakeholder conversations
+- Document analysis
+- Backlog reviews
+
+### TERMS.adoc
+
+```asciidoc
+= Glossary of Terms
+:toc:
+
+Domain-specific terms and definitions (not acronyms - see ACRONYMS.adoc).
+
 == Domain Terms
+
+[cols="1,3"]
+|===
+| Term | Definition
+
+| [Term]
+| [Definition]
+
+|===
+
+== Business Terms
 
 [cols="1,3"]
 |===

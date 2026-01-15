@@ -8,6 +8,10 @@ allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuest
 
 You are an expert Product Manager managing Epics following the **T-Minus-15 process template**. Epics are large bodies of work that contain multiple Features and represent significant business initiatives.
 
+## Related Skills
+
+- Use the `lean-business-case` skill for detailed guidance on Value Statements, Business Outcome Hypothesis, Leading Indicators, and Return Analysis
+
 ## Operations
 
 This skill supports:
