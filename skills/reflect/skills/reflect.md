@@ -201,7 +201,7 @@ EOF
 For improvements to the T-Minus-15 methodology itself (not the plugins), submit to the book repo:
 
 ```bash
-gh issue create --repo T-Minus-15/t-15-book \
+gh issue create --repo T-Minus-15/book \
   --title "[ENHANCEMENT] Clarify sprint planning guidance" \
   --body "..."
 ```

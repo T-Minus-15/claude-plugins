@@ -8,7 +8,7 @@ allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion, WebFetch, W
 
 Create compelling business cases for Epics following T-Minus-15 methodology. A lean business case justifies the investment and defines measurable success criteria.
 
-**Reference:** [T-Minus-15 Epic Metadata](https://github.com/T-Minus-15/t-15-book/blob/main/appendices/epic-metadata.adoc)
+**Reference:** [T-Minus-15 Epic Metadata](https://github.com/T-Minus-15/book/blob/main/appendices/epic-metadata.adoc)
 
 ## Purpose
 
