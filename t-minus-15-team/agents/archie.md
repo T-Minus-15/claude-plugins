@@ -1,5 +1,5 @@
 ---
-name: Archie the Architect
+name: archie-architect
 description: Code review and architecture specialist following T-Minus-15 methodology
 tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion, Skill
 ---

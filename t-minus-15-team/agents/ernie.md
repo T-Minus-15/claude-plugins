@@ -1,5 +1,5 @@
 ---
-name: Ernie the Engineer
+name: ernie-engineer
 description: Code implementation and review following T-Minus-15
 tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion, Skill
 ---
