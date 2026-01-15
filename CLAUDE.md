@@ -4,57 +4,42 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-T-Minus-15 Claude Plugins is a suite of AI agents and skills implementing the T-Minus-15 DevOps methodology. This is a **plugin repository**, not a traditional application—there are no build/test/lint commands. Plugins are markdown documents with JSON manifests installed via Claude's `/plugin` system.
+T-Minus-15 Claude Plugins implements **'T-Minus-15: Secrets of an Elite DevOps Team'** — AI agents for the complete software development lifecycle. This is a **plugin repository**, not a traditional application—there are no build/test/lint commands.
+
+Book: https://github.com/T-Minus-15/book
 
 ### Supported Platforms
 
-T-Minus-15 supports both **GitHub** and **Azure DevOps**:
-- **PRs**: `gh pr` (GitHub) / `az repos pr` (Azure DevOps)
-- **Workflows**: GitHub Actions / Azure Pipelines
-- **Issues**: GitHub Issues / Azure DevOps Work Items
+- **GitHub**: `gh pr`, GitHub Issues, GitHub Actions
+- **Azure DevOps**: `az repos pr`, Work Items, Azure Pipelines
 
-## Architecture
-
-### PDETO Lifecycle Agents (in `/agents/`)
-
-| Agent | Role | Command | Depends On |
-|-------|------|---------|------------|
-| Poppie | Planner | `/plan` | epic |
-| Pennie | Prepper | `/prep` | feature |
-| Dannie | Designer | `/design` | user-story |
-| Ernie | Engineer | `/engineer` | user-story, tech-stack |
-| Archie | Architect | `/vet` | pr-review |
-| Teddie | Tester | `/test` | e2e-tests |
-| Ollie | Operator | `/operate` | — |
-
-**Archie** owns architecture documentation in `/docs/*.adoc` and generates PDFs via `cd docs && ./generate-docs.sh`.
-
-### Skills (in `/skills/`)
-
-- **epic** - Create/edit Epics with T-Minus-15 metadata
-- **feature** - Features with MoSCoW prioritization
-- **user-story** - User Stories with AMP acceptance criteria (Acceptance/Measure/Proof)
-- **e2e-tests** - Playwright E2E test management
-- **pr-review** - Code review workflows
-- **reflect** - Continuous improvement and contribution
-- **tech-stack** - Default stack: Bun, Next.js 15, TypeScript 5, React 19, Tailwind 4, shadcn/ui
-
-### Plugin Structure
+## Repository Structure
 
 ```
-agents/[name]/
-├── .claude-plugin/plugin.json   # Manifest with dependencies
-├── agents/[name].md             # Agent personality & capabilities
-└── commands/[cmd].md            # Command definition
-
-skills/[name]/
-├── .claude-plugin/plugin.json   # Manifest
-└── skills/[name].md             # Operations, templates, guidelines
+/agents/*.md           # Agent definitions (Poppie, Pennie, etc.)
+/skills/*.md           # Skill definitions (epic, feature, etc.)
+/commands/*.md         # Slash command definitions
+/.claude-plugin/       # Marketplace configuration
 ```
 
-### Marketplace Bundle
+## Agents
 
-`/t-minus-15/.claude-plugin/plugin.json` - Master bundle installing all agents/skills together.
+| Agent | Role | Command | Phase |
+|-------|------|---------|-------|
+| Poppie | Planner | `/plan` | Planning & orchestration |
+| Pennie | Prepper | `/prep` | Requirements & backlog |
+| Dannie | Designer | `/design` | UX/UI & brand guidelines |
+| Ernie | Engineer | `/engineer` | Code implementation |
+| Archie | Architect | `/vet` | Code review & architecture |
+| Teddie | Tester | `/test` | E2E tests & QA |
+| Ollie | Operator | `/operate` | Deployment & monitoring |
+| Connie | Copywriter | `/copy` | Documentation quality |
+
+## Skills
+
+**Work Items:** epic, feature, user-story, bug, enhancement, task, risk, issue, question
+
+**Development:** e2e-tests, pr-review, tech-stack, documentation, brand-guidelines, wireframe, lean-business-case, reflect
 
 ## Key Conventions
 
@@ -156,18 +141,17 @@ Git URL:
 Available hooks:
 - `conversationStart` - Displays a welcome message at conversation start (Poppie introduces the team)
 
-## Testing Plugins Locally
+## Installation
 
 ```bash
-/plugin marketplace add T-Minus-15/t-15-claude-plugins
-/plugin install t-minus-15          # Install all
-/plugin install poppie@t-minus-15   # Install single agent
+/plugin marketplace add T-Minus-15/claude-plugins
+/plugin install t-minus-15
 ```
 
 ## Contributing
 
 Use the **reflect** skill to propose improvements. Issues go to:
-- Plugin issues: `T-Minus-15/t-15-claude-plugins`
+- Plugin issues: `T-Minus-15/claude-plugins`
 - Methodology issues: `T-Minus-15/book`
 
 Prefix issues with: `[ENHANCEMENT]`, `[BUG]`, or `[FEATURE]`
