@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "T-Minus-15 Team",
-      "description": "AI agents implementing 'T-Minus-15: Secrets of an Elite DevOps Team'. PDETO methodology (Prep → Design → Engineer → Test → Operate) with quality gates, structured work items (Epics, Features, User Stories with AMP criteria), and cross-functional collaboration.",
+      "description": "AI agents implementing 'T-Minus-15: Secrets of an Elite DevOps Team'. Prep → Design → Engineer → Test → Operate methodology with quality gates, structured work items (Epics, Features, User Stories with AMP criteria), and cross-functional collaboration.",
       "version": "1.0.0",
       "source": {
         "source": "github",
