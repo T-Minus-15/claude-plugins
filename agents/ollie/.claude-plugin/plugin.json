@@ -1,9 +1,0 @@
-{
-  "name": "ollie",
-  "version": "1.0.0",
-  "description": "Ollie the Operator - T-Minus-15 operations and deployment agent",
-  "keywords": ["t-minus-15", "agent", "operations", "devops", "deployment"],
-  "dependencies": {
-    "reflect": "^1.0.0"
-  }
-}

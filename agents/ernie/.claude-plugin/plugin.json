@@ -1,9 +1,0 @@
-{
-  "name": "ernie",
-  "version": "1.0.0",
-  "description": "Ernie the Engineer - T-Minus-15 implementation and development agent",
-  "keywords": ["t-minus-15", "agent", "engineer", "coding", "development"],
-  "dependencies": {
-    "tech-stack": "^1.0.0"
-  }
-}

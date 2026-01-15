@@ -71,7 +71,7 @@ The `tech-stack` skill defines our default stack for web applications, optimised
 ## Repository Structure
 
 ```
-/agents/*.md           # Agent definitions
+/*.md                  # Agent definitions (poppie.md, pennie.md, etc.)
 /skills/*.md           # Skill definitions
 /commands/*.md         # Slash command definitions
 /.claude-plugin/       # Plugin marketplace config

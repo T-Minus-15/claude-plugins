@@ -1,9 +1,0 @@
-{
-  "name": "teddie",
-  "version": "1.0.0",
-  "description": "Teddie the Tester - T-Minus-15 E2E testing and QA agent",
-  "keywords": ["t-minus-15", "agent", "testing", "playwright", "qa"],
-  "dependencies": {
-    "e2e-tests": "^1.0.0"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "name": "poppie",
-  "version": "1.0.0",
-  "description": "Poppie the Planner - T-Minus-15 Epic planning agent",
-  "keywords": ["t-minus-15", "agent", "planning", "epic"],
-  "dependencies": {
-    "epic": "^1.0.0"
-  }
-}

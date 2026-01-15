@@ -16,7 +16,7 @@ Book: https://github.com/T-Minus-15/book
 ## Repository Structure
 
 ```
-/agents/*.md           # Agent definitions (Poppie, Pennie, etc.)
+/*.md                  # Agent definitions (poppie.md, pennie.md, etc.)
 /skills/*.md           # Skill definitions (epic, feature, etc.)
 /commands/*.md         # Slash command definitions
 /.claude-plugin/       # Marketplace configuration
