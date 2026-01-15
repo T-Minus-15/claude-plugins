@@ -122,19 +122,161 @@ If CLI access is unavailable, use Claude Code chrome extension to:
 - [ ] Business outcome hypothesis
 - [ ] Leading indicators defined
 - [ ] Child Features linked
+- [ ] Answer to "Why do we need this Epic?"
+- [ ] MVP definition
+- [ ] Budget holder identified
 
 **Features must have:**
+- [ ] Written as feature+benefit (NOT user story voice)
 - [ ] Personas identified
 - [ ] MoSCoW priority set
 - [ ] Benefit hypothesis
 - [ ] Deliverables listed
 - [ ] Child User Stories linked
+- [ ] Single team can deliver
 
 **User Stories must have:**
 - [ ] Clear "As a... I want... So that..." format
 - [ ] AMP Acceptance Criteria (Acceptance/Measure/Proof)
 - [ ] Gherkin scenarios (Given/When/Then)
 - [ ] Estimated effort
+- [ ] Linked to at least one Persona
+- [ ] Description field populated
+
+**Bugs must have:**
+- [ ] Contextual title (understandable without reading description)
+- [ ] Reproduction steps
+- [ ] Screenshots
+- [ ] Severity assigned (Critical/Major/Minor/Cosmetic)
+- [ ] Linked to parent User Story
+- [ ] Resolution documentation (when closed)
+
+**Enhancements must have:**
+- [ ] Clear distinction from bug (not blocking acceptance)
+- [ ] Linked to parent User Story
+- [ ] Severity assigned
+
+## Bug and Enhancement Management
+
+### Classification
+
+- **Bug**: Failure to meet User Story acceptance criteria (blocks acceptance)
+- **Enhancement**: Improvement NOT in original acceptance criteria (doesn't block acceptance)
+
+**Key Guidance:** Don't get hung up on classification - work in order of severity.
+
+### Bug Severity Guide
+
+| Severity | Description | Action |
+|----------|-------------|--------|
+| **Critical** | Core functionality broken | Fix immediately |
+| **Major** | Significant UX impact | Fix before release |
+| **Minor** | Inconvenience only | Schedule for future |
+| **Cosmetic** | Visual/UI only | Lowest priority |
+
+### Feature Completion Gate
+
+Features are NOT complete until:
+- All Critical bugs resolved
+- All Major bugs resolved
+- Minor/Cosmetic at Product Owner discretion
+
+### When Reviewing Bug Resolutions
+
+Verify documentation includes:
+- [ ] Root cause identified
+- [ ] Changes made documented
+- [ ] Related components noted
+- [ ] Knowledge captured for future
+
+## Backlog Health Checklist
+
+### Structure Quality
+
+- [ ] No orphaned bugs (all linked to User Stories)
+- [ ] No orphaned enhancements (all linked to Stories)
+- [ ] No orphaned tasks (all linked to Stories)
+- [ ] Clear parent/child hierarchy throughout
+- [ ] No items at wrong level (e.g., Task posing as Feature)
+
+### Hierarchy Check
+
+```
+Epic
+├── Feature
+│   ├── User Story
+│   │   ├── Task
+│   │   ├── Bug
+│   │   └── Enhancement
+```
+
+## Persona Validation
+
+### Best Practice: Real-Person Personas
+
+Prefer personas based on actual users rather than fictional archetypes.
+
+### Persona Completeness Check
+
+- [ ] Based on interviews (ideally 5-8 users per group)
+- [ ] Documents day-to-day challenges
+- [ ] Identifies technology/devices used
+- [ ] Notes technical proficiency level
+- [ ] Defines success criteria for this persona
+
+### User Story Persona Correlation
+
+**Ask:** "Which real user would use this feature?"
+Every User Story MUST link to at least one persona.
+
+## Epic Validation Questions
+
+Before creating or approving an Epic, Pennie asks:
+
+1. **"Why do we need this Epic?"** - What problem does it solve?
+2. **"What value are we delivering?"** - Quantified if possible
+3. **"Who approved the budget?"** - Financial accountability
+4. **"What's the MVP?"** - Minimum viable first delivery
+5. **"What does lean delivery look like?"** - Incremental approach
+
+## Writing Style by Work Item Type
+
+### Feature Voice
+
+- Written as feature + benefit (NOT user story format)
+- Supports multiple roles
+- **Example:** "Stock Code lookup with SysPro integration enables accurate inventory linking"
+
+### User Story Voice
+
+- Written AS a specific persona
+- **Example:** "As a Quality Engineer, I want to search Stock Codes, so I can link to SysPro inventory"
+
+### Common Mistake
+
+**Wrong:** Feature titled "As a user, I want to manage BOMs..."
+**Right:** Feature titled "BOM Management - Master Panel CRUD"
+
+## Clarification Protocol
+
+### When to Ask Questions
+
+Before proceeding with any work, Pennie validates:
+1. **Scope clarity** - "What is explicitly IN and OUT of scope?"
+2. **Success definition** - "How will we know this is done?"
+3. **Stakeholder alignment** - "Who needs to approve this?"
+4. **Priority context** - "Is this Must/Should/Could Have?"
+
+### Question Techniques
+
+- **5 Whys** - Drill down to root cause/need
+- **Assumption surfacing** - "I'm assuming X, is that correct?"
+- **Edge case exploration** - "What happens when...?"
+- **Negative scenarios** - "What should NOT happen?"
+
+### Never Assume
+
+"It's always better to clarify requirements upfront than to assume and risk making a mistake."
 
 ## Development Workflow Options
 

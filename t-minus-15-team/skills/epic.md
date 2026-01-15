@@ -287,6 +287,124 @@ Epic
 
 **IMPORTANT:** User Stories are child work items of Features, NOT embedded in descriptions.
 
+## Azure DevOps
+
+### Check Process Template
+
+Before creating Epics, verify the work item type exists:
+
+```bash
+# Get project process template (shows Agile, Scrum, CMMI, or Basic)
+az devops project show --project "<project>" --query "capabilities.processTemplate.templateName" -o tsv
+
+# List available work item types
+az boards work-item type list --project "<project>" --query "[].name" -o tsv
+```
+
+**Process Templates:**
+- **Agile**: Epic (native)
+- **Scrum**: Epic (native)
+- **CMMI**: Epic (native)
+- **Basic**: Epic (native)
+
+### Create Epic
+
+```bash
+az boards work-item create \
+  --type "Epic" \
+  --title "BOM App Phase 2 - React Migration" \
+  --project "<project>" \
+  --fields "System.AreaPath=<area-path>" \
+           "System.IterationPath=<iteration-path>" \
+           "System.AssignedTo=product.owner@example.com"
+
+# Set Background field (if process template supports it)
+az boards work-item update \
+  --id <epic-id> \
+  --fields "Microsoft.VSTS.Common.BackgroundInformation=<background-content>"
+```
+
+### Query Epics
+
+```bash
+# All Epics
+az boards query --wiql "SELECT [ID], [Title], [State] FROM WorkItems WHERE [Work Item Type] = 'Epic'" -o table
+
+# Epics by state
+az boards query --wiql "SELECT [ID], [Title] FROM WorkItems WHERE [Work Item Type] = 'Epic' AND [State] = 'Implementing'"
+
+# Epics in area path
+az boards query --wiql "SELECT [ID], [Title] FROM WorkItems WHERE [Work Item Type] = 'Epic' AND [Area Path] UNDER '<area-path>'"
+
+# Get Epic with child Features
+az boards query --wiql "SELECT [ID], [Title] FROM WorkItemLinks WHERE [Source].[ID] = <epic-id> AND [Target].[Work Item Type] = 'Feature'"
+```
+
+### Link Features to Epic
+
+```bash
+# Link Feature as child of Epic
+az boards work-item relation add \
+  --id <feature-id> \
+  --relation-type "Parent" \
+  --target-id <epic-id>
+```
+
+## GitHub
+
+GitHub doesn't have a native Epic type. Use Issues with labels and Projects.
+
+### Create Epic Issue
+
+```bash
+gh issue create \
+  --title "[Epic] BOM App Phase 2 - React Migration" \
+  --body "## Background
+[50-200 words: Context for the Epic]
+
+## Objective
+[50-200 words: Primary goal]
+
+## Value Statement
+FOR [target users]
+WHO [have this need]
+THE [solution name]
+IS A [category]
+THAT [key benefit]
+
+## Features
+- [ ] #<feature-1-number> Feature Name
+- [ ] #<feature-2-number> Feature Name
+- [ ] #<feature-3-number> Feature Name
+
+## Success Criteria
+- [ ] [Criterion 1]
+- [ ] [Criterion 2]" \
+  --label "epic"
+```
+
+### Query Epics
+
+```bash
+# All open Epics
+gh issue list --label "epic" --state open
+
+# Epics in milestone
+gh issue list --label "epic" --milestone "Q1 2024"
+```
+
+### Using GitHub Projects for Epics
+
+For better Epic tracking, create a GitHub Project:
+
+```bash
+# Create project for Epic
+gh project create --title "Epic: BOM App Phase 2" --owner "<org>"
+
+# Add Feature issues to project
+gh project item-add <project-number> --url <issue-url>
+```
+
 ## Data Model Reference
 
 For projects with database integration, reference **DATA_MODEL.adoc** as the single source of truth:
@@ -325,6 +443,75 @@ For projects with database integration, reference **DATA_MODEL.adoc** as the sin
 > - Migrate to React
 > - Improve performance
 > - Same functionality
+
+## Validation Rules
+
+### Word Count Requirements
+
+| Field | Min | Max |
+|-------|-----|-----|
+| Background | 50 | 200 |
+| Objective | 50 | 200 |
+| Value Statement | 30 | 200 |
+| Business Outcome Hypothesis | 30 | 200 |
+| Leading Indicators | 30 | 200 |
+| Non-Functional Requirements | 30 | 200 |
+| Impact (all sections) | 30 | 200 |
+| Pre-requisites | 50 | 200 |
+| Incremental Strategy | 50 | 200 |
+| Sequence/Dependencies | 50 | 200 |
+| Milestones | 100 | 300 |
+| Other Notes | 0 | 300 |
+| Sponsors | 50 | 200 |
+| Innovation Start-up | 25 | 200 |
+
+### Format Requirements
+
+**Value Statement** - Must use structured format:
+```
+FOR [target users/customers]
+WHO [have this need/problem]
+THE [solution name]
+IS A [category/type of solution]
+THAT [key benefit/value proposition]
+UNLIKE [current alternatives]
+OUR SOLUTION [key differentiator]
+```
+
+**Innovation Hypothesis** - Must use format:
+```
+We believe that [target user] will [achieve outcome] by [feature/action], proven by [metric].
+```
+
+**Area Paths** - Should be hierarchical:
+```
+Company > Division > Product
+```
+
+### Epic States
+
+Valid workflow states:
+- New
+- Funnel
+- Validation
+- Proposing
+- Pending
+- Scheduled
+- Implementing
+
+### Validation Checklist
+
+Before submitting an Epic:
+- [ ] Background provides company context (50-200 words)
+- [ ] Objective states primary goal (50-200 words)
+- [ ] Value Statement follows FOR/WHO/THE/IS A/THAT format
+- [ ] Business Outcome Hypothesis defines measurable success
+- [ ] Leading Indicators are tangible and measurable
+- [ ] NFRs cover performance, security, reliability, scalability
+- [ ] Features are identified with MoSCoW priority
+- [ ] Milestones have target dates
+- [ ] Sponsors are identified
+- [ ] No percentages unless data supports them
 
 ## Tips
 

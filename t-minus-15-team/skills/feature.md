@@ -197,6 +197,125 @@ Quality Engineers can efficiently manage Master Panel specifications with real-t
 - As a Quality Engineer, I want to Save the record, so I can persist my changes
 - As a Quality Engineer, I want to Delete a record, so I can remove obsolete BOMs
 
+## Azure DevOps
+
+### Check Process Template
+
+Before creating Features, verify the work item type exists:
+
+```bash
+# Get project process template (shows Agile, Scrum, CMMI, or Basic)
+az devops project show --project "<project>" --query "capabilities.processTemplate.templateName" -o tsv
+
+# List available work item types
+az boards work-item type list --project "<project>" --query "[].name" -o tsv
+```
+
+**Process Templates:**
+- **Agile**: Feature (native)
+- **Scrum**: Feature (native)
+- **CMMI**: Feature (native)
+- **Basic**: Issue (use for Features, no native Feature type)
+
+### Create Feature
+
+```bash
+# Agile/Scrum/CMMI
+az boards work-item create \
+  --type "Feature" \
+  --title "React App - Master Panel CRUD" \
+  --project "<project>" \
+  --fields "System.AreaPath=<area-path>" \
+           "System.IterationPath=<iteration-path>" \
+           "System.AssignedTo=owner@example.com"
+
+# Link to parent Epic
+az boards work-item relation add \
+  --id <feature-id> \
+  --relation-type "Parent" \
+  --target-id <epic-id>
+
+# Basic template (use Issue with tag)
+az boards work-item create \
+  --type "Issue" \
+  --title "[Feature] React App - Master Panel CRUD" \
+  --project "<project>" \
+  --fields "System.Tags=Feature"
+```
+
+### Query Features
+
+```bash
+# All Features
+az boards query --wiql "SELECT [ID], [Title], [State] FROM WorkItems WHERE [Work Item Type] = 'Feature'" -o table
+
+# Features by state
+az boards query --wiql "SELECT [ID], [Title] FROM WorkItems WHERE [Work Item Type] = 'Feature' AND [State] = 'Engineer'"
+
+# Features under an Epic
+az boards query --wiql "SELECT [ID], [Title] FROM WorkItemLinks WHERE [Source].[ID] = <epic-id> AND [Target].[Work Item Type] = 'Feature'"
+
+# Features with child User Stories
+az boards query --wiql "SELECT [ID], [Title] FROM WorkItemLinks WHERE [Source].[ID] = <feature-id> AND [Target].[Work Item Type] = 'User Story'"
+```
+
+### Link User Stories to Feature
+
+```bash
+# Link User Story as child of Feature
+az boards work-item relation add \
+  --id <user-story-id> \
+  --relation-type "Parent" \
+  --target-id <feature-id>
+```
+
+## GitHub
+
+GitHub doesn't have a native Feature type. Use Issues with labels.
+
+### Create Feature Issue
+
+```bash
+gh issue create \
+  --title "[Feature] React App - Master Panel CRUD" \
+  --body "## Parent Epic
+Part of #<epic-issue-number>
+
+## Description
+Full create, read, update, delete functionality for Master Panel BOM records.
+
+## Persona(s)
+Quality Engineer, Production Manager
+
+## MoSCoW Priority
+Must Have
+
+## Deliverables
+- [ ] Master Panel form with 4 collapsible sections
+- [ ] Real-time calculation engine
+- [ ] Save/Save & Exit/Delete functionality
+- [ ] Stock Code lookup integration
+
+## User Stories
+- [ ] #<story-1> As a Quality Engineer, I want to select a Route
+- [ ] #<story-2> As a Quality Engineer, I want to select a Work Centre
+- [ ] #<story-3> As a Quality Engineer, I want to search Stock Codes" \
+  --label "feature,must-have"
+```
+
+### Query Features
+
+```bash
+# All open Features
+gh issue list --label "feature" --state open
+
+# Features by priority
+gh issue list --label "feature,must-have" --state open
+
+# Features in milestone
+gh issue list --label "feature" --milestone "Sprint 5"
+```
+
 ## Workflow
 
 1. **Identify the Feature scope** - What screen or capability?
@@ -207,6 +326,49 @@ Quality Engineers can efficiently manage Master Panel specifications with real-t
 6. **Create child User Stories** - As separate work items with "As a... I want to... so I..." titles
 7. **Link User Stories** - Parent relationship to Feature
 8. **Reference DATA_MODEL.adoc** - For field definitions and formulas
+
+## Validation Rules
+
+### Feature States
+
+Valid workflow states (PDETO phases):
+- Prep
+- Design
+- Engineer
+- Test
+- Closed
+
+### Feature Types
+- Feature (screen-based deliverable)
+- Enabler (cross-cutting technical capability)
+
+### MoSCoW Priority Values
+- Must Have
+- Should Have
+- Could Have
+- Won't Have
+
+### Effort Estimate Fields
+| Phase | Description |
+|-------|-------------|
+| Prep | Story points for preparation/research |
+| Design | Story points for design work |
+| Engineer | Story points for development |
+| Test | Story points for testing |
+| Plan | Story points for planning |
+
+### Validation Checklist
+
+Before submitting a Feature:
+- [ ] Title is descriptive (screen name or enabler purpose)
+- [ ] Linked to parent Epic
+- [ ] Feature type specified (Feature or Enabler)
+- [ ] MoSCoW priority assigned
+- [ ] Persona(s) identified
+- [ ] Description is plain text (2-3 sentences, no markdown)
+- [ ] Deliverables listed as concrete outputs
+- [ ] Effort estimates provided per phase
+- [ ] Child User Stories created (not embedded in description)
 
 ## Tips
 

@@ -132,6 +132,26 @@ npm run test          # Must pass (if applicable)
 
 For new projects or when reviewing project infrastructure, verify:
 
+### Repository Naming
+
+**Repository names should describe the solution, not default to the project or organization name.**
+
+- [ ] Repository name uses `kebab-case` (lowercase with hyphens)
+- [ ] Repository name describes what the solution does
+- [ ] Repository name is NOT just the default project/organization name
+
+**Bad Examples:**
+- `MyCompany` (default project name, says nothing about the solution)
+- `Project1` (generic, meaningless)
+- `NewRepo` (default name)
+
+**Good Examples:**
+- `invoice-automation-api` (describes the solution)
+- `customer-portal-frontend` (clear purpose)
+- `data-sync-service` (explains what it does)
+
+**Azure DevOps Note:** When creating a new project, DevOps often creates a default repository with the same name as the project. This should be renamed or replaced with a properly named repository that describes the actual solution.
+
 ### Configuration Files
 - [ ] `.eslintrc.js` / `eslint.config.js` - Linting rules configured
 - [ ] `.prettierrc` / `prettier.config.js` - Formatting rules configured
