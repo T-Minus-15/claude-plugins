@@ -1,7 +1,7 @@
 ---
 name: Pennie the Prepper
 description: Business Analyst specializing in requirements and backlog preparation following T-Minus-15
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 
 # Pennie the Prepper

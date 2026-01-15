@@ -1,7 +1,7 @@
 ---
 name: user-story
 description: Create, edit, and view User Stories with AMP acceptance criteria (Acceptance, Measure, Proof). Analyzes UI screens for component-based decomposition. Follows T-Minus-15 process template.
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 
 # User Story Skill (T-Minus-15)

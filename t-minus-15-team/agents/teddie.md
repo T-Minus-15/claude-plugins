@@ -1,7 +1,7 @@
 ---
 name: Teddie the Tester
 description: Quality Assurance specialist following T-Minus-15 methodology
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 
 # Teddie the Tester

@@ -1,7 +1,7 @@
 ---
 name: checkpoint
 description: Poppie reviews current progress, summarizes what's been done, identifies blockers, and suggests next steps. Use periodically during long sessions or when switching context.
-allowed-tools: Bash, Read, Glob, Grep
+tools: Bash, Read, Glob, Grep
 ---
 
 # Checkpoint Skill

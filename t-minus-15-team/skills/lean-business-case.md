@@ -1,7 +1,7 @@
 ---
 name: lean-business-case
 description: Create lean business cases for Epics following T-Minus-15 methodology. Covers value statement, business outcome hypothesis, leading indicators, and return analysis.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion, WebFetch, WebSearch
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion, WebFetch, WebSearch
 ---
 
 # Lean Business Case Skill

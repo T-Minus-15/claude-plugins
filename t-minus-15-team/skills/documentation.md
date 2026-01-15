@@ -1,7 +1,7 @@
 ---
 name: documentation
 description: Standard documentation structure for T-Minus-15 projects. Defines the /docs folder layout and AsciiDoc templates.
-allowed-tools: Read, Write, Edit, Glob, Grep, AskUserQuestion
+tools: Read, Write, Edit, Glob, Grep, AskUserQuestion
 ---
 
 # Documentation Skill

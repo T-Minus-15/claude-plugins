@@ -1,7 +1,7 @@
 ---
 name: issue
 description: Create, edit, and manage Issue work items. Context-aware for GitHub Issues vs Azure DevOps T-Minus-15 Issues (blockers/impediments).
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Issue Skill

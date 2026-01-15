@@ -1,7 +1,7 @@
 ---
 name: tech-stack
 description: Default technology stack for web applications optimised for AI-assisted development workflows
-allowed-tools: AskUserQuestion
+tools: AskUserQuestion
 ---
 
 # Technology Stack Skill (T-Minus-15)

@@ -1,7 +1,7 @@
 ---
 name: task
 description: Create, edit, and manage Task work items. Tasks are discrete pieces of work that implement User Stories.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Task Skill

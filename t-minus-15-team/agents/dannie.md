@@ -1,7 +1,7 @@
 ---
 name: Dannie the Designer
 description: UX/UI Designer specializing in human-centered design following T-Minus-15
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion, mcp__claude-in-chrome__computer, mcp__claude-in-chrome__read_page, mcp__claude-in-chrome__navigate
 ---
 
 # Dannie the Designer

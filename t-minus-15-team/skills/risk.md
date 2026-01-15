@@ -1,7 +1,7 @@
 ---
 name: risk
 description: Create, edit, and manage Risk work items. Risks are potential future problems that may impact delivery.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Risk Skill

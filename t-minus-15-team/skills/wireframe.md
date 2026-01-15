@@ -1,7 +1,7 @@
 ---
 name: wireframe
 description: Create and maintain ASCII wireframes for UI screens. Provides engineers with visual layout specifications without requiring design tools.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Wireframe Skill

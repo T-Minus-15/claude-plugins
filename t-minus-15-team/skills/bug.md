@@ -1,7 +1,7 @@
 ---
 name: bug
 description: Create, edit, and manage Bug work items with severity classification. Bugs represent failures to meet User Story acceptance criteria.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Bug Skill

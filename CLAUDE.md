@@ -43,6 +43,32 @@ Book: https://github.com/T-Minus-15/book
 
 **Development:** e2e-tests, pr-review, tech-stack, documentation, brand-guidelines, wireframe, lean-business-case, reflect
 
+## Agent & Skill Frontmatter
+
+Agents and skills use YAML frontmatter with these fields:
+
+```yaml
+---
+name: agent-or-skill-name
+description: When to use this agent/skill
+tools: Read, Grep, Glob, Bash, Task, Write, Edit, AskUserQuestion
+model: inherit  # Optional: sonnet, opus, haiku, or inherit
+---
+```
+
+**Required fields:**
+- `name` - Unique identifier (lowercase, hyphens)
+- `description` - When Claude should use this agent/skill
+
+**Optional fields:**
+- `tools` - Comma-separated list of available tools
+- `model` - Which model to use (defaults to `sonnet`)
+
+**MCP Tools:** To give agents access to MCP tools, add them by full name:
+```yaml
+tools: Read, Write, Bash, mcp__claude-in-chrome__computer, mcp__claude-in-chrome__navigate
+```
+
 ## Key Conventions
 
 ### Work Item Hierarchy

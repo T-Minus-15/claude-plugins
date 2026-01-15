@@ -1,7 +1,7 @@
 ---
 name: enhancement
 description: Create, edit, and manage Enhancement work items. Enhancements are improvements that don't block User Story acceptance.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Enhancement Skill

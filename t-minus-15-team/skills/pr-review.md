@@ -1,7 +1,7 @@
 ---
 name: pr-review
 description: Expert pull request reviewer. Use when asked to review a PR, examine code changes, validate modifications, or provide feedback on proposed changes. Applies best practices for code review including security, quality, and documentation checks.
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch
+tools: Read, Grep, Glob, Bash, Task, WebFetch
 ---
 
 # Pull Request Review Skill

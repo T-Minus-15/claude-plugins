@@ -1,7 +1,7 @@
 ---
 name: feature
 description: Create, edit, and view Features following the T-Minus-15 process template. Features are significant deliverables containing multiple User Stories with MoSCoW prioritization, effort estimates, deliverables, and benefit hypothesis.
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 
 # Feature Skill (T-Minus-15)

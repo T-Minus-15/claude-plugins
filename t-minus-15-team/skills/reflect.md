@@ -1,7 +1,7 @@
 ---
 name: reflect
 description: Reflects on the recent conversation to identify improvements for CLAUDE.md, documentation, skills, and processes. Uses AskUserQuestion to propose and confirm changes.
-allowed-tools: Read, Grep, Glob, Write, Edit, WebFetch, AskUserQuestion
+tools: Read, Grep, Glob, Write, Edit, WebFetch, AskUserQuestion
 ---
 
 # Reflect Skill

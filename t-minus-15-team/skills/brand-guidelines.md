@@ -1,7 +1,7 @@
 ---
 name: brand-guidelines
 description: Create and maintain brand guidelines documentation. Defines colors, typography, spacing, and reusable components for consistent UI implementation.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Brand Guidelines Skill

@@ -1,7 +1,7 @@
 ---
 name: e2e-tests
 description: Create, edit, run, and manage End-to-End (E2E) tests using Playwright. Tests verify User Stories by mapping to AMP acceptance criteria. Supports Playwright MCP server for interactive execution.
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 
 # E2E Tests Skill (Playwright)

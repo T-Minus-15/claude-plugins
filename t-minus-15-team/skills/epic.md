@@ -1,7 +1,7 @@
 ---
 name: epic
 description: Create, edit, and view Epics following the T-Minus-15 process template. Epics are large bodies of work containing multiple Features with comprehensive metadata for background, objectives, hypothesis, analysis, and delivery strategy.
-allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 
 # Epic Skill (T-Minus-15)

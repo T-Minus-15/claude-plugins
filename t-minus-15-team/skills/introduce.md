@@ -1,7 +1,7 @@
 ---
 name: introduce
 description: Poppie introduces herself and the T-Minus-15 team, showing current project context. Use at conversation start or when someone asks to meet the team.
-allowed-tools: Bash, Read, Glob
+tools: Bash, Read, Glob
 ---
 
 # Introduce Skill

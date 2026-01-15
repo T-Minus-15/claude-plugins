@@ -1,7 +1,7 @@
 ---
 name: question
 description: Create, edit, and manage Question work items. Questions are clarifications needed before work can proceed.
-allowed-tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Write, Edit, AskUserQuestion
 ---
 
 # Question Skill
