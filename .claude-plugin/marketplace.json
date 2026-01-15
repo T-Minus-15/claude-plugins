@@ -11,8 +11,7 @@
       "version": "1.0.0",
       "source": {
         "source": "github",
-        "repo": "T-Minus-15/claude-plugins",
-        "path": "t-minus-15-team"
+        "repo": "T-Minus-15/claude-plugins"
       }
     }
   ],
