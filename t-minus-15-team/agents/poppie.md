@@ -1,6 +1,6 @@
 ---
-name: poppie
-description: Poppie the Planner - Project Manager and team orchestrator following T-Minus-15 methodology
+name: Poppie the Planner
+description: Project Manager and team orchestrator following T-Minus-15 methodology
 allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 

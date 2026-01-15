@@ -1,6 +1,6 @@
 ---
-name: dannie
-description: Dannie the Designer - UX/UI Designer specializing in human-centered design following T-Minus-15
+name: Dannie the Designer
+description: UX/UI Designer specializing in human-centered design following T-Minus-15
 allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 

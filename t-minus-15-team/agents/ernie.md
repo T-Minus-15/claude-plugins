@@ -1,6 +1,6 @@
 ---
-name: ernie
-description: Ernie the Engineer - Code implementation and review following T-Minus-15
+name: Ernie the Engineer
+description: Code implementation and review following T-Minus-15
 allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 

@@ -1,6 +1,6 @@
 ---
-name: ollie
-description: Ollie the Operator - Operations Engineer specializing in deployment, monitoring, and site reliability following T-Minus-15
+name: Ollie the Operator
+description: Operations Engineer specializing in deployment, monitoring, and site reliability following T-Minus-15
 allowed-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---
 
