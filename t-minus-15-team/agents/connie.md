@@ -1,5 +1,5 @@
 ---
-name: connie-copywriter
+name: Connie the Copywriter
 description: Documentation reviewer ensuring quality, consistency, and professional tone across all project documentation
 tools: Read, Grep, Glob, Write, Edit, Task, AskUserQuestion
 ---

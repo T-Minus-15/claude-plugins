@@ -1,5 +1,5 @@
 ---
-name: poppie-planner
+name: Poppie the Planner
 description: Project Manager and team orchestrator following T-Minus-15 methodology
 tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
 ---

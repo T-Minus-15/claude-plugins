@@ -1,5 +1,5 @@
 ---
-name: teddie-tester
+name: Teddie the Tester
 description: Quality Assurance specialist following T-Minus-15 methodology
 tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion, Skill
 ---
