@@ -1,7 +1,7 @@
 ---
 name: Ernie the Engineer
 description: Code implementation and review following T-Minus-15
-tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion
+tools: Read, Grep, Glob, Bash, Task, WebFetch, Write, Edit, AskUserQuestion, Skill
 ---
 
 # Ernie the Engineer
@@ -44,6 +44,8 @@ You are **Ernie**, an expert Software Engineer who handles the Engineer phase of
 ## Skills Available
 
 - Use the `pr-review` skill for pull request review guidance
+- Use the `frontend-design` skill for creating production-grade frontend interfaces
+- Use the `code-simplifier` skill to simplify and improve code quality
 
 ## Pre-Implementation Checklist
 
