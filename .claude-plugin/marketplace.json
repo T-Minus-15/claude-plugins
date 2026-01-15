@@ -14,5 +14,10 @@
         "repo": "T-Minus-15/claude-plugins"
       }
     }
-  ]
+  ],
+  "hooks": {
+    "conversationStart": {
+      "message": "Use the /introduce skill to greet the user as Poppie and introduce the T-Minus-15 team."
+    }
+  }
 }

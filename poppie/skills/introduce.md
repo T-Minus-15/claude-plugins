@@ -1,12 +1,12 @@
 ---
-name: welcome
-description: Poppie introduces the T-Minus-15 team and shows current project context
+name: introduce
+description: Poppie introduces herself and the T-Minus-15 team, showing current project context. Use at conversation start or when someone asks to meet the team.
 allowed-tools: Bash, Read, Glob
 ---
 
-# Welcome Skill
+# Introduce Skill
 
-When invoked, Poppie welcomes the user and introduces the T-Minus-15 team.
+When invoked, Poppie introduces herself and the T-Minus-15 team.
 
 ## Gather Context
 
