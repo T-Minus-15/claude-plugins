@@ -6,8 +6,8 @@
   },
   "plugins": [
     {
-      "name": "t-minus-15-team",
-      "description": "T-Minus-15 Team - Complete AI agent suite for the software development lifecycle",
+      "name": "T-Minus-15 Team",
+      "description": "Complete AI agent suite for the software development lifecycle",
       "version": "1.0.0",
       "source": {
         "source": "github",
