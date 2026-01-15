@@ -20,8 +20,7 @@ This skill defines the standard documentation structure for T-Minus-15 projects.
 | `CONFIDENTIALITY.adoc` | Data classification, security requirements, access controls | Archie |
 | `CONTACTS.adoc` | Key stakeholders, support contacts, escalation paths | Poppie |
 | `FAQS.adoc` | Frequently asked questions and answers | Poppie, Pennie |
-| `TERMS.adoc` | Glossary of domain-specific terms and definitions | Pennie |
-| `ACRONYMS.adoc` | Project and industry acronyms | Pennie |
+| `TERMS.adoc` | Glossary of acronyms, terms, and definitions | Pennie |
 | `TROUBLESHOOTING.adoc` | Common problems and solutions (table format) | Ollie, Teddie |
 | `TECHNICAL_SOLUTION.adoc` | Master document that compiles all above docs | Archie, Connie |
 
@@ -389,15 +388,15 @@ Answer to question 2.
 Step-by-step answer.
 ```
 
-### ACRONYMS.adoc
+### TERMS.adoc
 
 ```asciidoc
-= Acronyms
+= Glossary of Terms
 :toc:
 
-Project and industry acronyms used in this documentation.
+Acronyms, terms, and definitions used in this project.
 
-== General Technical
+== Acronyms
 
 [cols="1,3"]
 |===
@@ -405,6 +404,9 @@ Project and industry acronyms used in this documentation.
 
 | API
 | Application Programming Interface
+
+| BOM
+| Bill of Materials
 
 | CI/CD
 | Continuous Integration / Continuous Deployment
@@ -416,46 +418,6 @@ Project and industry acronyms used in this documentation.
 | User Interface / User Experience
 
 |===
-
-== Project Specific
-
-[cols="1,3"]
-|===
-| Acronym | Definition
-
-| BOM
-| Bill of Materials
-
-| [Add project-specific acronyms as they are encountered]
-|
-
-|===
-
-== Industry / Domain
-
-[cols="1,3"]
-|===
-| Acronym | Definition
-
-| [Add industry acronyms as they are encountered]
-|
-
-|===
-```
-
-**Pennie's Responsibility:** Pennie should add acronyms to this file whenever she encounters them during:
-- Transcript reviews
-- Stakeholder conversations
-- Document analysis
-- Backlog reviews
-
-### TERMS.adoc
-
-```asciidoc
-= Glossary of Terms
-:toc:
-
-Domain-specific terms and definitions (not acronyms - see ACRONYMS.adoc).
 
 == Domain Terms
 
@@ -479,6 +441,12 @@ Domain-specific terms and definitions (not acronyms - see ACRONYMS.adoc).
 
 |===
 ```
+
+**Pennie's Responsibility:** Pennie should add acronyms and terms to this file whenever she encounters them during:
+- Transcript reviews
+- Stakeholder conversations
+- Document analysis
+- Backlog reviews
 
 ### TROUBLESHOOTING.adoc
 
