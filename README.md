@@ -68,6 +68,36 @@ The `tech-stack` skill defines our default stack for web applications, optimised
 
 *Note: Agents will confirm technology choices before implementing.*
 
+## Optional Enhancements
+
+These plugins and MCP servers enhance agent capabilities but are not required:
+
+### Plugins
+
+| Plugin | Agents | Description |
+|--------|--------|-------------|
+| `frontend-design` | Dannie, Ernie | Production-grade frontend interfaces with high design quality |
+| `code-simplifier` | Ernie, Archie | Code simplification and quality improvements |
+
+Install with:
+```bash
+/plugin install frontend-design
+/plugin install code-simplifier
+```
+
+### MCP Servers
+
+| MCP Server | Agents | Description |
+|------------|--------|-------------|
+| Playwright | Teddie | Interactive browser automation for E2E testing |
+
+Install Playwright MCP:
+```bash
+npx @anthropic/claude-code mcp add playwright -- npx @anthropic/mcp-server-playwright
+```
+
+*Agents will prompt you to install these when relevant functionality is needed.*
+
 ## Repository Structure
 
 ```
